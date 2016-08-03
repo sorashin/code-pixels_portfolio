@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>three.js webgl - loaders - OBJ loader</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            @font-face{ 
+                font-family: 'MyWebFont';
+                src: url('font/WebFont.eot');
+                src: url('font/WebFont.eot?iefix') format('eot'),
+                     url('font/WebFont.woff') format('woff'),
+                     url('font/WebFont.ttf') format('truetype'),
+                     url('font/WebFont.svg#webfont') format('svg');
+            }
+            body {
+                font-family: Monospace;
+                background-color: #fff;
+                color: #000;
+                margin: 0px;
+                overflow: hidden;
+                position:relative;
+            }
+            h1{
+                text-align:center;
+                position:absolute;
+                top:45%;
+                left:5%;
+                font-size:45px;
+                font-family: 'MyWebFont', Arial, sans-serif;
+            }
+            p{
+                text-align:center;
+                position:absolute;
+                top:55%;
+                left:5%;
+                font-size:20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script src="js/three.js"></script>
+        <script src="js/OBJLoader.js"></script>
+        <script src="js/CanvasRenderer.js"></script>
+        <script src="js/Projector.js"></script>
+        <script src="js/AsciiEffect.js"></script>
+        <script>
+            var container;
+
+            var camera, scene, renderer;
+
+            var mouseX = 0, mouseY = 0;
+
+            var bubbly, bubbly_pos = 0;
+
+            var windowHalfX = window.innerWidth / 2;
+            var windowHalfY = window.innerHeight / 2;
+
+            var start = Date.now();
+
+            init();
+            animate();
+
+            function init() {
+                container = document.createElement( 'div' );
+                document.body.appendChild( container );
+                camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+                camera.position.z = 450;
+                // scene
+                scene = new THREE.Scene();
+                var ambient = new THREE.AmbientLight( 0x101030 );
+                scene.add( ambient );
+                var directionalLight = new THREE.DirectionalLight( 0xffeedd );
+                directionalLight.position.set( 0, 0, 1 );
+                scene.add( directionalLight );
+                // texture
+                var manager = new THREE.LoadingManager();
+                manager.onProgress = function ( item, loaded, total ) {
+                    console.log( item, loaded, total );
+                };
+                var texture = new THREE.Texture();
+                var onProgress = function ( xhr ) {
+                    if ( xhr.lengthComputable ) {
+                        var percentComplete = xhr.loaded / xhr.total * 100;
+                        console.log( Math.round(percentComplete, 2) + '% downloaded' );
+                    }
+                };
+                var onError = function ( xhr ) {
+                };
+                // var loader = new THREE.ImageLoader( manager );
+                // loader.load( 'textures/UV_Grid_Sm.jpg', function ( image ) {
+                //     texture.image = image;
+                //     texture.needsUpdate = true;
+                // } );
+                // model
+                var loader = new THREE.OBJLoader( manager );
+                loader.load( 'obj/bubbly/blender_bubbly_3.obj', function ( object ) {
+                    // console.log("obj_loaded");
+                    object.traverse( function ( child ) {
+                        if ( child instanceof THREE.Mesh ) {
+                            // child.material.map = texture;
+                            // child.material.ambient.setHex(0xf0f0f0);
+                            child.material.color.setHex(0xcdcdcd);
+                        }
+                    } );
+                    object.position.y = 0;
+                    // object.position.x = 100;
+                    // objectをObject3Dで包み込む
+                    bubbly = new THREE.Object3D();
+                    bubbly.add(object);
+
+                    scene.add( bubbly );
+                }, onProgress, onError );
+                //
+                renderer = new THREE.CanvasRenderer();
+                renderer.setClearColor(0xf0f0f0);
+                renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize( window.innerWidth, window.innerHeight );
+                // container.appendChild( renderer.domElement );
+                // ↑コメントアウトするとアスキー
+                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                
+                //ASCII setting start
+                var width = window.innerWidth || 2;
+                var height = window.innerHeight || 2;
+                effect = new THREE.AsciiEffect( renderer );
+                effect.setSize( width, height );
+                container.appendChild( effect.domElement );
+
+
+                //
+                window.addEventListener( 'resize', onWindowResize, false );
+            }
+            function onWindowResize() {
+                windowHalfX = window.innerWidth / 2;
+                windowHalfY = window.innerHeight / 2;
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize( window.innerWidth, window.innerHeight );
+                effect.setSize( window.innerWidth, window.innerHeight );
+            }
+            function onDocumentMouseMove( event ) {
+                mouseX = ( event.clientX - windowHalfX ) / 2;
+                mouseY = ( event.clientY - windowHalfY ) / 2;
+            }
+            //
+            function animate() {
+                requestAnimationFrame( animate );
+                render();
+            }
+            function render() {
+
+                var timer = Date.now() - start;
+
+                // camera.position.x += ( mouseX - camera.position.x ) * .05;
+                // camera.position.y += ( - mouseY - camera.position.y ) * .05;
+                bubbly.position.y = Math.abs( Math.sin( timer * 0.002 ) ) * 150 - 80;
+                bubbly.position.x = 50;
+                bubbly.rotation.y = timer * 0.0004;
+                camera.lookAt( scene.position );
+                effect.render( scene, camera );
+            }
+        </script>
+
+        <h1 class="random_1">BUBBLY</h1>
+        <p class="random_2">ストリートパフォーマー用の投げ銭デバイス</p>
+
+        <script src="js/randomText.js"></script>
+        <script>
+            letterTicker_1 = new LetterTicker('.random_1', {
+              callback: function() {
+                return console.log(txt);
+              },
+              step: 8,
+              fps: 60,
+              // text: 'Hello, world!!!'
+            });
+            letterTicker_2 = new LetterTicker('.random_2', {
+              callback: function() {
+                return console.log(txt);
+              },
+              step: 8,
+              fps: 60,
+              // text: 'Hello, world!!!'
+            });
+        </script>
+    </body>
+</html>
