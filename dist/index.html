@@ -105,7 +105,7 @@
                     bubbly = new THREE.Object3D();
                     bubbly.add(object);
 
-                    // scene.add( bubbly );
+                    scene.add( bubbly );
                 }, onProgress, onError );
                 loader.load( 'obj/smartlock/rhino_bl.obj', function ( object ) {
                     // console.log("obj_loaded");

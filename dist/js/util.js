@@ -17,13 +17,13 @@ $(document).ready(function(){
           ink.css({height: d, width: d, top: cx, left: cy});
     }
     // BUBBLY追加
-    scene.add(bubbly);
+    // scene.add(bubbly);
   },function(){
     	$("h1", this).removeClass("fadein_h1");
       $("p", this).removeClass("fadein_p");
       $("span", this).removeClass("ripple_animate");
       // BUBBLY削除
-      scene.remove( bubbly );
+      // scene.remove( bubbly );
   });
   $(".smartlock").hover(function(){
     // FadeIn
@@ -44,11 +44,13 @@ $(document).ready(function(){
     }
     // BUBBLY追加
     scene.add(smartlock);
+    scene.remove( bubbly );
   },function(){
       $("h1", this).removeClass("fadein_h1");
       $("p", this).removeClass("fadein_p");
       $("span", this).removeClass("ripple_animate");
       // BUBBLY削除
       scene.remove( smartlock );
+      scene.add(bubbly);
   });
 });
