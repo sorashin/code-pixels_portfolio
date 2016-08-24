@@ -32,7 +32,7 @@
                 <h1 class="random_1">BUBBLY</h1>
                 <p class="random_2">ストリートパフォーマー用の投げ銭デバイス</p>
               </div>
-              <div class="bubbly">
+              <div class="smartlock">
                 <h1>smart Lock</h1>
                 <p>自転車用のスマートロックで紡ぐシェアリングエコノミー</p>
                 <a href="#" class="pointer"><span></span>smart Lock</a>
@@ -174,9 +174,10 @@
                 bubbly.position.x = 50;
                 bubbly.rotation.y = timer * 0.0004;
 
-                smartlock.position.y = Math.abs( Math.sin( timer * 0.002 ) ) * 150 - 80;
-                smartlock.position.x = 50;
-                smartlock.rotation.y = timer * 0.0004;
+                smartlock.rotation.y = timer * 0.001;
+                // smartlock.rotation.z = 8;
+                // smartlock.rotation.x = 180;
+                // smartlock.rotation.y = timer * 0.0004;
 
                 camera.lookAt( scene.position );
                 effect.render( scene, camera );
