@@ -28,7 +28,7 @@
             <div class="works">
               <h1>WORKS</h1>
               <div class="bubbly">
-                <a href="#" class="pointer"><span></span>bubbly</a>
+                <a href="http://bubbly.jp" class="pointer" target="_blank"><span></span>bubbly</a>
                 <h1 class="random_1">BUBBLY</h1>
                 <p class="random_2">ストリートパフォーマー用の投げ銭デバイス</p>
               </div>
@@ -37,6 +37,10 @@
                 <p>自転車用のスマートロックで紡ぐシェアリングエコノミー</p>
                 <a href="#" class="pointer"><span></span>smart Lock</a>
               </div>
+            </div>
+            <div class="contact">
+              <h1>CONTACT</h1>
+              <p>nakamajin52@gmail.comまで！</p>
             </div>
           </div>
         </div>
@@ -107,7 +111,7 @@
 
                     scene.add( bubbly );
                 }, onProgress, onError );
-                loader.load( 'obj/smartlock/rhino_bl.obj', function ( object ) {
+                loader.load( 'obj/smartlock/rhino_bl_vol1.obj', function ( object ) {
                     // console.log("obj_loaded");
                     object.traverse( function ( child ) {
                         if ( child instanceof THREE.Mesh ) {
