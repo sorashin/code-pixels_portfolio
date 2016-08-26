@@ -461,7 +461,6 @@ body {
 /* line 32, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .title {
   text-align: center;
-  margin-top: 300px;
   font-size: 45px;
   font-family: 'MyWebFont', Arial, sans-serif; }
   /* line 38, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
@@ -471,84 +470,81 @@ body {
     text-indent: -9999px;
     background: url(../img/logo.png); }
 
-/* line 45, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-.about {
-  margin-top: 400px; }
-  /* line 47, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-  .about h1 {
-    text-align: center;
-    font-size: 45px; }
-  /* line 51, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-  .about p {
-    text-align: center;
-    font-size: 20px; }
+/* line 47, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+.about h1 {
+  text-align: center;
+  font-size: 45px; }
 
-/* line 56, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-.works {
-  margin-top: 400px; }
-  /* line 58, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-  .works h1 {
-    text-align: center;
-    font-size: 45px; }
-  /* line 62, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-  .works p {
-    text-align: center;
-    font-size: 20px; }
-  /* line 66, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-  .works .bubbly, .works .smartlock {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    position: relative;
-    border: solid 1px rgba(100, 100, 100, 0.7);
-    min-height: 250px; }
-    /* line 72, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-    .works .bubbly h1, .works .smartlock h1 {
+/* line 51, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+.about p {
+  text-align: center;
+  font-size: 20px; }
+
+/* line 58, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+.works h1 {
+  text-align: center;
+  font-size: 45px; }
+
+/* line 62, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+.works p {
+  text-align: center;
+  font-size: 20px; }
+
+/* line 66, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+.works .bubbly, .works .smartlock {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  border: solid 1px rgba(100, 100, 100, 0.7);
+  min-height: 250px; }
+  /* line 72, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  .works .bubbly h1, .works .smartlock h1 {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    /*text-align:center;*/
+    font-size: 45px;
+    font-family: 'MyWebFont', Arial, sans-serif;
+    z-index: 2;
+    text-align: left;
+    cursor: pointer;
+    opacity: 0.3;
+    -webkit-transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1);
+    transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1); }
+  /* line 86, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  .works .bubbly p, .works .smartlock p {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    /*text-align:center;*/
+    font-size: 20px;
+    z-index: 2;
+    text-align: left;
+    cursor: pointer;
+    opacity: 0.3;
+    -webkit-transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1);
+    transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1);
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s; }
+  /* line 100, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  .works .bubbly a, .works .smartlock a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    z-index: 99; }
+    /* line 116, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+    .works .bubbly a span, .works .smartlock a span {
+      display: block;
       position: absolute;
-      top: 80px;
-      left: 20px;
-      /*text-align:center;*/
-      font-size: 45px;
-      font-family: 'MyWebFont', Arial, sans-serif;
-      z-index: 2;
-      text-align: left;
-      cursor: pointer;
-      opacity: 0.3;
-      -webkit-transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1);
-      transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1); }
-    /* line 86, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-    .works .bubbly p, .works .smartlock p {
-      position: absolute;
-      top: 60px;
-      left: 20px;
-      /*text-align:center;*/
-      font-size: 20px;
-      z-index: 2;
-      text-align: left;
-      cursor: pointer;
-      opacity: 0.3;
-      -webkit-transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1);
-      transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1);
-      -webkit-transition-delay: 0.1s;
-              transition-delay: 0.1s; }
-    /* line 100, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-    .works .bubbly a, .works .smartlock a {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      overflow: hidden;
-      text-indent: 100%;
-      white-space: nowrap;
-      z-index: 99; }
-      /* line 116, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
-      .works .bubbly a span, .works .smartlock a span {
-        display: block;
-        position: absolute;
-        background-color: rgba(100, 100, 100, 0.1);
-        border-radius: 50%;
-        -webkit-transform: scale(0);
-                transform: scale(0); }
+      background-color: rgba(100, 100, 100, 0.1);
+      border-radius: 50%;
+      -webkit-transform: scale(0);
+              transform: scale(0); }
 
 /* line 142, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .contact {
@@ -591,99 +587,99 @@ body {
 
 @-webkit-keyframes noise-anim {
   0% {
-    clip: rect(90px, 9999px, 64px, 0); }
+    clip: rect(100px, 9999px, 9px, 0); }
   5% {
-    clip: rect(99px, 9999px, 29px, 0); }
+    clip: rect(6px, 9999px, 92px, 0); }
   10% {
-    clip: rect(13px, 9999px, 98px, 0); }
+    clip: rect(63px, 9999px, 41px, 0); }
   15% {
-    clip: rect(28px, 9999px, 42px, 0); }
+    clip: rect(10px, 9999px, 21px, 0); }
   20% {
-    clip: rect(24px, 9999px, 25px, 0); }
+    clip: rect(38px, 9999px, 78px, 0); }
   25% {
-    clip: rect(77px, 9999px, 20px, 0); }
+    clip: rect(76px, 9999px, 52px, 0); }
   30% {
-    clip: rect(5px, 9999px, 16px, 0); }
+    clip: rect(37px, 9999px, 17px, 0); }
   35% {
-    clip: rect(88px, 9999px, 3px, 0); }
+    clip: rect(81px, 9999px, 24px, 0); }
   40% {
-    clip: rect(97px, 9999px, 23px, 0); }
+    clip: rect(21px, 9999px, 78px, 0); }
   45% {
-    clip: rect(95px, 9999px, 24px, 0); }
+    clip: rect(60px, 9999px, 26px, 0); }
   50% {
-    clip: rect(8px, 9999px, 61px, 0); }
+    clip: rect(84px, 9999px, 8px, 0); }
   55% {
-    clip: rect(16px, 9999px, 70px, 0); }
+    clip: rect(60px, 9999px, 42px, 0); }
   60% {
-    clip: rect(6px, 9999px, 1px, 0); }
+    clip: rect(54px, 9999px, 67px, 0); }
   65% {
-    clip: rect(74px, 9999px, 11px, 0); }
+    clip: rect(37px, 9999px, 78px, 0); }
   70% {
-    clip: rect(79px, 9999px, 62px, 0); }
+    clip: rect(92px, 9999px, 62px, 0); }
   75% {
-    clip: rect(81px, 9999px, 35px, 0); }
+    clip: rect(22px, 9999px, 62px, 0); }
   80% {
-    clip: rect(69px, 9999px, 75px, 0); }
+    clip: rect(57px, 9999px, 75px, 0); }
   85% {
-    clip: rect(52px, 9999px, 9px, 0); }
+    clip: rect(25px, 9999px, 18px, 0); }
   90% {
-    clip: rect(20px, 9999px, 93px, 0); }
+    clip: rect(77px, 9999px, 74px, 0); }
   95% {
-    clip: rect(31px, 9999px, 27px, 0); }
+    clip: rect(60px, 9999px, 61px, 0); }
   100% {
-    clip: rect(100px, 9999px, 50px, 0); } }
+    clip: rect(12px, 9999px, 60px, 0); } }
 
 @keyframes noise-anim {
   0% {
-    clip: rect(90px, 9999px, 64px, 0); }
+    clip: rect(100px, 9999px, 9px, 0); }
   5% {
-    clip: rect(99px, 9999px, 29px, 0); }
+    clip: rect(6px, 9999px, 92px, 0); }
   10% {
-    clip: rect(13px, 9999px, 98px, 0); }
+    clip: rect(63px, 9999px, 41px, 0); }
   15% {
-    clip: rect(28px, 9999px, 42px, 0); }
+    clip: rect(10px, 9999px, 21px, 0); }
   20% {
-    clip: rect(24px, 9999px, 25px, 0); }
+    clip: rect(38px, 9999px, 78px, 0); }
   25% {
-    clip: rect(77px, 9999px, 20px, 0); }
+    clip: rect(76px, 9999px, 52px, 0); }
   30% {
-    clip: rect(5px, 9999px, 16px, 0); }
+    clip: rect(37px, 9999px, 17px, 0); }
   35% {
-    clip: rect(88px, 9999px, 3px, 0); }
+    clip: rect(81px, 9999px, 24px, 0); }
   40% {
-    clip: rect(97px, 9999px, 23px, 0); }
+    clip: rect(21px, 9999px, 78px, 0); }
   45% {
-    clip: rect(95px, 9999px, 24px, 0); }
+    clip: rect(60px, 9999px, 26px, 0); }
   50% {
-    clip: rect(8px, 9999px, 61px, 0); }
+    clip: rect(84px, 9999px, 8px, 0); }
   55% {
-    clip: rect(16px, 9999px, 70px, 0); }
+    clip: rect(60px, 9999px, 42px, 0); }
   60% {
-    clip: rect(6px, 9999px, 1px, 0); }
+    clip: rect(54px, 9999px, 67px, 0); }
   65% {
-    clip: rect(74px, 9999px, 11px, 0); }
+    clip: rect(37px, 9999px, 78px, 0); }
   70% {
-    clip: rect(79px, 9999px, 62px, 0); }
+    clip: rect(92px, 9999px, 62px, 0); }
   75% {
-    clip: rect(81px, 9999px, 35px, 0); }
+    clip: rect(22px, 9999px, 62px, 0); }
   80% {
-    clip: rect(69px, 9999px, 75px, 0); }
+    clip: rect(57px, 9999px, 75px, 0); }
   85% {
-    clip: rect(52px, 9999px, 9px, 0); }
+    clip: rect(25px, 9999px, 18px, 0); }
   90% {
-    clip: rect(20px, 9999px, 93px, 0); }
+    clip: rect(77px, 9999px, 74px, 0); }
   95% {
-    clip: rect(31px, 9999px, 27px, 0); }
+    clip: rect(60px, 9999px, 61px, 0); }
   100% {
-    clip: rect(100px, 9999px, 50px, 0); } }
+    clip: rect(12px, 9999px, 60px, 0); } }
 
 /* line 185, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .glitch:after {
   content: "";
   position: absolute;
   left: 1px;
-  width: 500px;
-  height: 79px;
+  width: 100%;
+  height: 100%;
   text-shadow: -1px 0 red;
   top: 0;
   color: black;
@@ -695,99 +691,99 @@ body {
 
 @-webkit-keyframes noise-anim-2 {
   0% {
-    clip: rect(2px, 9999px, 46px, 0); }
+    clip: rect(18px, 9999px, 16px, 0); }
   5% {
-    clip: rect(3px, 9999px, 32px, 0); }
+    clip: rect(33px, 9999px, 23px, 0); }
   10% {
-    clip: rect(46px, 9999px, 50px, 0); }
+    clip: rect(39px, 9999px, 2px, 0); }
   15% {
-    clip: rect(14px, 9999px, 23px, 0); }
+    clip: rect(33px, 9999px, 18px, 0); }
   20% {
-    clip: rect(14px, 9999px, 45px, 0); }
+    clip: rect(19px, 9999px, 9px, 0); }
   25% {
-    clip: rect(48px, 9999px, 2px, 0); }
+    clip: rect(7px, 9999px, 37px, 0); }
   30% {
-    clip: rect(5px, 9999px, 1px, 0); }
+    clip: rect(44px, 9999px, 36px, 0); }
   35% {
-    clip: rect(15px, 9999px, 6px, 0); }
+    clip: rect(4px, 9999px, 21px, 0); }
   40% {
-    clip: rect(7px, 9999px, 1px, 0); }
+    clip: rect(2px, 9999px, 36px, 0); }
   45% {
-    clip: rect(6px, 9999px, 38px, 0); }
+    clip: rect(30px, 9999px, 37px, 0); }
   50% {
-    clip: rect(37px, 9999px, 29px, 0); }
+    clip: rect(26px, 9999px, 32px, 0); }
   55% {
-    clip: rect(6px, 9999px, 46px, 0); }
+    clip: rect(50px, 9999px, 35px, 0); }
   60% {
-    clip: rect(8px, 9999px, 33px, 0); }
+    clip: rect(16px, 9999px, 49px, 0); }
   65% {
-    clip: rect(9px, 9999px, 9px, 0); }
+    clip: rect(18px, 9999px, 35px, 0); }
   70% {
-    clip: rect(44px, 9999px, 18px, 0); }
+    clip: rect(41px, 9999px, 12px, 0); }
   75% {
-    clip: rect(10px, 9999px, 41px, 0); }
+    clip: rect(13px, 9999px, 43px, 0); }
   80% {
-    clip: rect(22px, 9999px, 14px, 0); }
+    clip: rect(47px, 9999px, 6px, 0); }
   85% {
-    clip: rect(45px, 9999px, 33px, 0); }
+    clip: rect(22px, 9999px, 24px, 0); }
   90% {
-    clip: rect(23px, 9999px, 38px, 0); }
+    clip: rect(39px, 9999px, 35px, 0); }
   95% {
-    clip: rect(43px, 9999px, 40px, 0); }
+    clip: rect(29px, 9999px, 22px, 0); }
   100% {
-    clip: rect(19px, 9999px, 21px, 0); } }
+    clip: rect(33px, 9999px, 37px, 0); } }
 
 @keyframes noise-anim-2 {
   0% {
-    clip: rect(2px, 9999px, 46px, 0); }
+    clip: rect(18px, 9999px, 16px, 0); }
   5% {
-    clip: rect(3px, 9999px, 32px, 0); }
+    clip: rect(33px, 9999px, 23px, 0); }
   10% {
-    clip: rect(46px, 9999px, 50px, 0); }
+    clip: rect(39px, 9999px, 2px, 0); }
   15% {
-    clip: rect(14px, 9999px, 23px, 0); }
+    clip: rect(33px, 9999px, 18px, 0); }
   20% {
-    clip: rect(14px, 9999px, 45px, 0); }
+    clip: rect(19px, 9999px, 9px, 0); }
   25% {
-    clip: rect(48px, 9999px, 2px, 0); }
+    clip: rect(7px, 9999px, 37px, 0); }
   30% {
-    clip: rect(5px, 9999px, 1px, 0); }
+    clip: rect(44px, 9999px, 36px, 0); }
   35% {
-    clip: rect(15px, 9999px, 6px, 0); }
+    clip: rect(4px, 9999px, 21px, 0); }
   40% {
-    clip: rect(7px, 9999px, 1px, 0); }
+    clip: rect(2px, 9999px, 36px, 0); }
   45% {
-    clip: rect(6px, 9999px, 38px, 0); }
+    clip: rect(30px, 9999px, 37px, 0); }
   50% {
-    clip: rect(37px, 9999px, 29px, 0); }
+    clip: rect(26px, 9999px, 32px, 0); }
   55% {
-    clip: rect(6px, 9999px, 46px, 0); }
+    clip: rect(50px, 9999px, 35px, 0); }
   60% {
-    clip: rect(8px, 9999px, 33px, 0); }
+    clip: rect(16px, 9999px, 49px, 0); }
   65% {
-    clip: rect(9px, 9999px, 9px, 0); }
+    clip: rect(18px, 9999px, 35px, 0); }
   70% {
-    clip: rect(44px, 9999px, 18px, 0); }
+    clip: rect(41px, 9999px, 12px, 0); }
   75% {
-    clip: rect(10px, 9999px, 41px, 0); }
+    clip: rect(13px, 9999px, 43px, 0); }
   80% {
-    clip: rect(22px, 9999px, 14px, 0); }
+    clip: rect(47px, 9999px, 6px, 0); }
   85% {
-    clip: rect(45px, 9999px, 33px, 0); }
+    clip: rect(22px, 9999px, 24px, 0); }
   90% {
-    clip: rect(23px, 9999px, 38px, 0); }
+    clip: rect(39px, 9999px, 35px, 0); }
   95% {
-    clip: rect(43px, 9999px, 40px, 0); }
+    clip: rect(29px, 9999px, 22px, 0); }
   100% {
-    clip: rect(19px, 9999px, 21px, 0); } }
+    clip: rect(33px, 9999px, 37px, 0); } }
 
 /* line 210, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .glitch:before {
   content: "";
   position: absolute;
   left: -2px;
-  width: 500px;
-  height: 79px;
+  width: 100%;
+  height: 100%;
   text-shadow: 1px 0 blue;
   top: 0;
   color: black;
