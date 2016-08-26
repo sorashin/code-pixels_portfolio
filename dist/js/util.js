@@ -1,4 +1,15 @@
 $(document).ready(function(){
+  h = $(window).height();
+  console.log(h);
+  $(".section").css("min-height", h + "px");
+  $(".title").css("margin-top", h/2-20 + "px");
+  $(window).resize(function() {
+  //画面リサイズ時の高さ取得
+  h = $(window).height();
+  $(".section").css("min-height", h + "px");
+  $(".title").css("margin-top", h/2-20 + "px");
+  });
+  // BUBBLYをホバーした時に表示するアクション
   $(".bubbly").hover(function(){
     // FadeIn
   	$("h1" ,this).addClass("fadein_h1");
@@ -25,6 +36,7 @@ $(document).ready(function(){
       // BUBBLY削除
       // scene.remove( bubbly );
   });
+  // SMARTLOCKをホバーした時に表示するアクション
   $(".smartlock").hover(function(){
     // FadeIn
     $("h1" ,this).addClass("fadein_h1");

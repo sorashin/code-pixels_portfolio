@@ -31,7 +31,7 @@ body {
 }
 .title{
   text-align:center;
-  margin-top: 300px;
+  // margin-top: 300px;
   // margin-left: -200px;
   font-size:45px;
   font-family: 'MyWebFont', Arial, sans-serif;
@@ -43,7 +43,7 @@ body {
   }
 }
 .about{
-  margin-top: 400px;
+  // margin-top: 400px;
   h1{
     text-align: center;
     font-size: 45px;
@@ -54,7 +54,7 @@ body {
   }
 }
 .works{
-  margin-top: 400px;
+  // margin-top: 400px;
   h1{
     text-align: center;
     font-size: 45px;
@@ -188,8 +188,8 @@ body {
   content: "";
   position:absolute;
   left:1px;
-  width: 500px;
-  height: 79px;
+  width: 100%;
+  height: 100%;
   text-shadow:-1px 0 red;
   top:0;
   color:black;
@@ -213,8 +213,8 @@ body {
   content: "";
   position:absolute;
   left:-2px;
-  width: 500px;
-  height: 79px;
+  width: 100%;
+  height: 100%;
   text-shadow:1px 0 blue;
   top:0;
   color:black;
