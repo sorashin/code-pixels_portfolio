@@ -22,7 +22,7 @@
             <div class="about section">
               <h1>ABOUT</h1>
               <p>
-                City&Dotsは、街とテクノロジーをテーマに<br>作品の製作・開発を行っているテクノロジスト集団です。
+                City&Dotsは、街とテクノロジーをテーマに作品の製作・開発を行っているテクノロジスト集団です。
               </p>
             </div>
             <div class="works section">
@@ -107,6 +107,10 @@
                     // object.position.x = 100;
                     // objectをObject3Dで包み込む
                     bubbly = new THREE.Object3D();
+
+                    var scale = window.innerWidth/600;
+                    bubbly.scale.set(scale, scale, scale);
+
                     bubbly.add(object);
 
                     scene.add( bubbly );
@@ -124,6 +128,10 @@
                     // object.position.x = 100;
                     // objectをObject3Dで包み込む
                     smartlock = new THREE.Object3D();
+
+                    var scale = window.innerWidth/1000;
+                    smartlock.scale.set(scale, scale, scale);
+
                     smartlock.add(object);
 
                     // scene.add( smartlock );
@@ -175,7 +183,7 @@
                 // camera.position.x += ( mouseX - camera.position.x ) * .05;
                 // camera.position.y += ( - mouseY - camera.position.y ) * .05;
                 bubbly.position.y = Math.abs( Math.sin( timer * 0.002 ) ) * 150 - 80;
-                bubbly.position.x = 50;
+                bubbly.position.x = 0;
                 bubbly.rotation.y = timer * 0.0004;
 
                 smartlock.rotation.y = timer * 0.001;
