@@ -12,8 +12,8 @@ $middle: "only screen and (min-width:641px) and (max-width:959px)";
 $large:  "only screen and (min-width:960px)";
 body {
     font-family: Monospace;
-    background: radial-gradient(#FFFFFF, #EEEEEE) fixed;
-    color: #000;
+    // background: radial-gradient(#FFFFFF, #EEEEEE) fixed;
+    color: #000000;
     margin: 0px;
     overflow: hidden;
     position:relative;
@@ -26,6 +26,7 @@ body {
   left: 0;
   right: 0;
   overflow-y: auto;
+  background: rgba(255,255,255,.1);
 }
 .contents_wrap{
   width: 90%;
@@ -38,6 +39,17 @@ body {
   // margin-left: -200px;
   font-size:45px;
   font-family: 'MyWebFont', Arial, sans-serif;
+  &:after{
+    @media #{$small} {
+      content: "";
+      display: block;
+      width:30px;
+      height: 16px;
+      margin: 100px auto 0px auto;
+      background: url("../img/arrow.png");
+      background-size:cover;
+    }
+  }
   h1{
     width: 500px;
     height: 79px;
