@@ -435,9 +435,7 @@ th {
 /* line 13, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 body {
   font-family: Monospace;
-  background: -webkit-radial-gradient(#FFFFFF, #EEEEEE) fixed;
-  background: radial-gradient(#FFFFFF, #EEEEEE) fixed;
-  color: #000;
+  color: #000000;
   margin: 0px;
   overflow: hidden;
   position: relative;
@@ -450,20 +448,31 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  overflow-y: auto; }
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.1); }
 
-/* line 30, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 31, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .contents_wrap {
   width: 90%;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 35, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 36, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .title {
   text-align: center;
   font-size: 45px;
   font-family: 'MyWebFont', Arial, sans-serif; }
-  /* line 41, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  @media only screen and (max-width: 640px) {
+    /* line 42, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+    .title:after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 16px;
+      margin: 100px auto 0px auto;
+      background: url("../img/arrow.png");
+      background-size: cover; } }
+  /* line 53, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
   .title h1 {
     width: 500px;
     height: 79px;
@@ -471,39 +480,39 @@ body {
     background: url(../img/logo.png);
     background-size: cover; }
     @media only screen and (max-width: 640px) {
-      /* line 41, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+      /* line 53, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
       .title h1 {
         width: 250px;
         height: 47px; } }
 
-/* line 55, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 67, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .about h1 {
   text-align: center;
   font-size: 45px; }
 
-/* line 59, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 71, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .about p {
   text-align: center;
   font-size: 20px; }
 
-/* line 66, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 78, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .works h1 {
   text-align: center;
   font-size: 45px; }
 
-/* line 70, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 82, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .works p {
   text-align: center;
   font-size: 20px; }
 
-/* line 74, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 86, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .works .bubbly, .works .smartlock {
   margin-top: 100px;
   margin-bottom: 100px;
   position: relative;
   border: solid 1px rgba(100, 100, 100, 0.7);
   min-height: 250px; }
-  /* line 80, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  /* line 92, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
   .works .bubbly h1, .works .smartlock h1 {
     position: absolute;
     top: 80px;
@@ -518,12 +527,12 @@ body {
     -webkit-transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1);
     transition: 0.6s cubic-bezier(0.29, 0, 0.49, 1); }
     @media only screen and (max-width: 640px) {
-      /* line 80, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+      /* line 92, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
       .works .bubbly h1, .works .smartlock h1 {
         margin: 0;
         top: 30px;
         opacity: 1; } }
-  /* line 99, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  /* line 111, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
   .works .bubbly p, .works .smartlock p {
     position: absolute;
     top: 60px;
@@ -539,12 +548,12 @@ body {
     -webkit-transition-delay: 0.1s;
             transition-delay: 0.1s; }
     @media only screen and (max-width: 640px) {
-      /* line 99, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+      /* line 111, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
       .works .bubbly p, .works .smartlock p {
         margin: 0;
         top: 110px;
         opacity: 1; } }
-  /* line 118, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  /* line 130, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
   .works .bubbly a, .works .smartlock a {
     position: absolute;
     top: 0;
@@ -555,7 +564,7 @@ body {
     text-indent: 100%;
     white-space: nowrap;
     z-index: 99; }
-    /* line 134, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+    /* line 146, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
     .works .bubbly a span, .works .smartlock a span {
       display: block;
       position: absolute;
@@ -564,38 +573,38 @@ body {
       -webkit-transform: scale(0);
               transform: scale(0); }
 
-/* line 160, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 172, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .contact {
   margin-top: 40px; }
-  /* line 162, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  /* line 174, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
   .contact h1 {
     text-align: center;
     font-size: 45px; }
-  /* line 166, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+  /* line 178, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
   .contact p {
     text-align: center;
     font-size: 20px; }
 
-/* line 171, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 183, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .works .bubbly .fadein_h1, .works .smartlock .fadein_h1 {
   opacity: 1;
   left: 60px; }
 
-/* line 176, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 188, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .works .bubbly .fadein_p, .works .smartlock .fadein_p {
   opacity: 1;
   left: 60px; }
 
-/* line 181, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 193, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .works .bubbly .fadein_a, .works .smartlock .fadein_a {
   width: 100%; }
 
-/* line 184, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 196, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .ripple_animate {
   -webkit-animation: ripple 0.8s linear;
           animation: ripple 0.8s linear; }
 
-/* line 188, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 200, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .glitch {
   color: black;
   font-size: 100px;
@@ -605,93 +614,93 @@ body {
 
 @-webkit-keyframes noise-anim {
   0% {
-    clip: rect(32px, 9999px, 31px, 0); }
+    clip: rect(79px, 9999px, 96px, 0); }
   5% {
-    clip: rect(74px, 9999px, 33px, 0); }
+    clip: rect(77px, 9999px, 7px, 0); }
   10% {
-    clip: rect(5px, 9999px, 52px, 0); }
+    clip: rect(52px, 9999px, 11px, 0); }
   15% {
-    clip: rect(87px, 9999px, 38px, 0); }
+    clip: rect(12px, 9999px, 6px, 0); }
   20% {
-    clip: rect(28px, 9999px, 73px, 0); }
+    clip: rect(18px, 9999px, 46px, 0); }
   25% {
-    clip: rect(66px, 9999px, 47px, 0); }
+    clip: rect(100px, 9999px, 52px, 0); }
   30% {
-    clip: rect(79px, 9999px, 87px, 0); }
+    clip: rect(21px, 9999px, 31px, 0); }
   35% {
-    clip: rect(65px, 9999px, 13px, 0); }
+    clip: rect(34px, 9999px, 5px, 0); }
   40% {
-    clip: rect(66px, 9999px, 49px, 0); }
+    clip: rect(34px, 9999px, 70px, 0); }
   45% {
-    clip: rect(89px, 9999px, 75px, 0); }
+    clip: rect(47px, 9999px, 86px, 0); }
   50% {
-    clip: rect(34px, 9999px, 45px, 0); }
+    clip: rect(46px, 9999px, 32px, 0); }
   55% {
-    clip: rect(7px, 9999px, 34px, 0); }
+    clip: rect(52px, 9999px, 31px, 0); }
   60% {
-    clip: rect(98px, 9999px, 20px, 0); }
+    clip: rect(22px, 9999px, 85px, 0); }
   65% {
-    clip: rect(93px, 9999px, 74px, 0); }
+    clip: rect(46px, 9999px, 98px, 0); }
   70% {
-    clip: rect(95px, 9999px, 5px, 0); }
+    clip: rect(18px, 9999px, 7px, 0); }
   75% {
-    clip: rect(49px, 9999px, 35px, 0); }
+    clip: rect(24px, 9999px, 8px, 0); }
   80% {
-    clip: rect(29px, 9999px, 44px, 0); }
+    clip: rect(7px, 9999px, 31px, 0); }
   85% {
-    clip: rect(43px, 9999px, 55px, 0); }
+    clip: rect(55px, 9999px, 10px, 0); }
   90% {
-    clip: rect(9px, 9999px, 85px, 0); }
+    clip: rect(67px, 9999px, 95px, 0); }
   95% {
-    clip: rect(88px, 9999px, 20px, 0); }
+    clip: rect(98px, 9999px, 91px, 0); }
   100% {
-    clip: rect(86px, 9999px, 61px, 0); } }
+    clip: rect(68px, 9999px, 24px, 0); } }
 
 @keyframes noise-anim {
   0% {
-    clip: rect(32px, 9999px, 31px, 0); }
+    clip: rect(79px, 9999px, 96px, 0); }
   5% {
-    clip: rect(74px, 9999px, 33px, 0); }
+    clip: rect(77px, 9999px, 7px, 0); }
   10% {
-    clip: rect(5px, 9999px, 52px, 0); }
+    clip: rect(52px, 9999px, 11px, 0); }
   15% {
-    clip: rect(87px, 9999px, 38px, 0); }
+    clip: rect(12px, 9999px, 6px, 0); }
   20% {
-    clip: rect(28px, 9999px, 73px, 0); }
+    clip: rect(18px, 9999px, 46px, 0); }
   25% {
-    clip: rect(66px, 9999px, 47px, 0); }
+    clip: rect(100px, 9999px, 52px, 0); }
   30% {
-    clip: rect(79px, 9999px, 87px, 0); }
+    clip: rect(21px, 9999px, 31px, 0); }
   35% {
-    clip: rect(65px, 9999px, 13px, 0); }
+    clip: rect(34px, 9999px, 5px, 0); }
   40% {
-    clip: rect(66px, 9999px, 49px, 0); }
+    clip: rect(34px, 9999px, 70px, 0); }
   45% {
-    clip: rect(89px, 9999px, 75px, 0); }
+    clip: rect(47px, 9999px, 86px, 0); }
   50% {
-    clip: rect(34px, 9999px, 45px, 0); }
+    clip: rect(46px, 9999px, 32px, 0); }
   55% {
-    clip: rect(7px, 9999px, 34px, 0); }
+    clip: rect(52px, 9999px, 31px, 0); }
   60% {
-    clip: rect(98px, 9999px, 20px, 0); }
+    clip: rect(22px, 9999px, 85px, 0); }
   65% {
-    clip: rect(93px, 9999px, 74px, 0); }
+    clip: rect(46px, 9999px, 98px, 0); }
   70% {
-    clip: rect(95px, 9999px, 5px, 0); }
+    clip: rect(18px, 9999px, 7px, 0); }
   75% {
-    clip: rect(49px, 9999px, 35px, 0); }
+    clip: rect(24px, 9999px, 8px, 0); }
   80% {
-    clip: rect(29px, 9999px, 44px, 0); }
+    clip: rect(7px, 9999px, 31px, 0); }
   85% {
-    clip: rect(43px, 9999px, 55px, 0); }
+    clip: rect(55px, 9999px, 10px, 0); }
   90% {
-    clip: rect(9px, 9999px, 85px, 0); }
+    clip: rect(67px, 9999px, 95px, 0); }
   95% {
-    clip: rect(88px, 9999px, 20px, 0); }
+    clip: rect(98px, 9999px, 91px, 0); }
   100% {
-    clip: rect(86px, 9999px, 61px, 0); } }
+    clip: rect(68px, 9999px, 24px, 0); } }
 
-/* line 203, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 215, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .glitch:after {
   content: "";
   position: absolute;
@@ -710,93 +719,93 @@ body {
 
 @-webkit-keyframes noise-anim-2 {
   0% {
-    clip: rect(49px, 9999px, 45px, 0); }
+    clip: rect(30px, 9999px, 24px, 0); }
   5% {
-    clip: rect(39px, 9999px, 37px, 0); }
+    clip: rect(10px, 9999px, 37px, 0); }
   10% {
-    clip: rect(44px, 9999px, 37px, 0); }
+    clip: rect(19px, 9999px, 22px, 0); }
   15% {
-    clip: rect(44px, 9999px, 24px, 0); }
+    clip: rect(2px, 9999px, 8px, 0); }
   20% {
-    clip: rect(23px, 9999px, 17px, 0); }
+    clip: rect(19px, 9999px, 29px, 0); }
   25% {
-    clip: rect(40px, 9999px, 43px, 0); }
+    clip: rect(24px, 9999px, 46px, 0); }
   30% {
-    clip: rect(46px, 9999px, 48px, 0); }
+    clip: rect(34px, 9999px, 5px, 0); }
   35% {
-    clip: rect(1px, 9999px, 47px, 0); }
+    clip: rect(47px, 9999px, 35px, 0); }
   40% {
-    clip: rect(9px, 9999px, 23px, 0); }
+    clip: rect(11px, 9999px, 6px, 0); }
   45% {
-    clip: rect(14px, 9999px, 24px, 0); }
+    clip: rect(7px, 9999px, 32px, 0); }
   50% {
-    clip: rect(18px, 9999px, 39px, 0); }
+    clip: rect(39px, 9999px, 37px, 0); }
   55% {
-    clip: rect(14px, 9999px, 26px, 0); }
+    clip: rect(23px, 9999px, 42px, 0); }
   60% {
-    clip: rect(28px, 9999px, 31px, 0); }
+    clip: rect(27px, 9999px, 35px, 0); }
   65% {
-    clip: rect(44px, 9999px, 42px, 0); }
+    clip: rect(13px, 9999px, 5px, 0); }
   70% {
-    clip: rect(24px, 9999px, 17px, 0); }
+    clip: rect(16px, 9999px, 4px, 0); }
   75% {
-    clip: rect(42px, 9999px, 22px, 0); }
+    clip: rect(21px, 9999px, 41px, 0); }
   80% {
-    clip: rect(7px, 9999px, 23px, 0); }
+    clip: rect(44px, 9999px, 25px, 0); }
   85% {
-    clip: rect(31px, 9999px, 35px, 0); }
+    clip: rect(42px, 9999px, 45px, 0); }
   90% {
-    clip: rect(39px, 9999px, 29px, 0); }
+    clip: rect(49px, 9999px, 20px, 0); }
   95% {
-    clip: rect(31px, 9999px, 32px, 0); }
+    clip: rect(21px, 9999px, 22px, 0); }
   100% {
-    clip: rect(37px, 9999px, 3px, 0); } }
+    clip: rect(44px, 9999px, 31px, 0); } }
 
 @keyframes noise-anim-2 {
   0% {
-    clip: rect(49px, 9999px, 45px, 0); }
+    clip: rect(30px, 9999px, 24px, 0); }
   5% {
-    clip: rect(39px, 9999px, 37px, 0); }
+    clip: rect(10px, 9999px, 37px, 0); }
   10% {
-    clip: rect(44px, 9999px, 37px, 0); }
+    clip: rect(19px, 9999px, 22px, 0); }
   15% {
-    clip: rect(44px, 9999px, 24px, 0); }
+    clip: rect(2px, 9999px, 8px, 0); }
   20% {
-    clip: rect(23px, 9999px, 17px, 0); }
+    clip: rect(19px, 9999px, 29px, 0); }
   25% {
-    clip: rect(40px, 9999px, 43px, 0); }
+    clip: rect(24px, 9999px, 46px, 0); }
   30% {
-    clip: rect(46px, 9999px, 48px, 0); }
+    clip: rect(34px, 9999px, 5px, 0); }
   35% {
-    clip: rect(1px, 9999px, 47px, 0); }
+    clip: rect(47px, 9999px, 35px, 0); }
   40% {
-    clip: rect(9px, 9999px, 23px, 0); }
+    clip: rect(11px, 9999px, 6px, 0); }
   45% {
-    clip: rect(14px, 9999px, 24px, 0); }
+    clip: rect(7px, 9999px, 32px, 0); }
   50% {
-    clip: rect(18px, 9999px, 39px, 0); }
+    clip: rect(39px, 9999px, 37px, 0); }
   55% {
-    clip: rect(14px, 9999px, 26px, 0); }
+    clip: rect(23px, 9999px, 42px, 0); }
   60% {
-    clip: rect(28px, 9999px, 31px, 0); }
+    clip: rect(27px, 9999px, 35px, 0); }
   65% {
-    clip: rect(44px, 9999px, 42px, 0); }
+    clip: rect(13px, 9999px, 5px, 0); }
   70% {
-    clip: rect(24px, 9999px, 17px, 0); }
+    clip: rect(16px, 9999px, 4px, 0); }
   75% {
-    clip: rect(42px, 9999px, 22px, 0); }
+    clip: rect(21px, 9999px, 41px, 0); }
   80% {
-    clip: rect(7px, 9999px, 23px, 0); }
+    clip: rect(44px, 9999px, 25px, 0); }
   85% {
-    clip: rect(31px, 9999px, 35px, 0); }
+    clip: rect(42px, 9999px, 45px, 0); }
   90% {
-    clip: rect(39px, 9999px, 29px, 0); }
+    clip: rect(49px, 9999px, 20px, 0); }
   95% {
-    clip: rect(31px, 9999px, 32px, 0); }
+    clip: rect(21px, 9999px, 22px, 0); }
   100% {
-    clip: rect(37px, 9999px, 3px, 0); } }
+    clip: rect(44px, 9999px, 31px, 0); } }
 
-/* line 229, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
+/* line 241, /Users/shintaronakajima/開発/code&pixels/app/scss/style.scss */
 .glitch:before {
   content: "";
   position: absolute;
